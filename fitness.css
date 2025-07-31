@@ -443,7 +443,7 @@ main {
   margin: auto;
 }
 .calculator-contain {
-  width: 40%;
+  width: 640px;
   margin: auto;
   margin-bottom: 88px;
 }
@@ -559,6 +559,171 @@ input::placeholder {
 
 /********** Meet Our Team ************/
 
+#team {
+  width: var(--width-1);
+  margin: 88px auto;
+}
+.team-contain {
+  text-align: center;
+  width: 60%;
+  margin: auto;
+}
+.team-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  border-radius: 18px;
+  background: rgba(255, 255, 255, 0.1);
+  padding: 20px;
+  margin-top: 58px;
+}
+.team-card {
+  position: relative;
+}
+.team-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 18px;
+  background: rgba(0, 0, 0, 0.2);
+}
+.team-info {
+  padding: 20px;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+}
+.team-name {
+  color: rgb(255, 255, 255);
+  font-size: 20px;
+  font-weight: 900;
+  line-height: 120%;
+}
+.team-title {
+  color: rgba(255, 255, 255, 0.5);
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 120%;
+}
+
+/*********** footer ********/
+footer {
+  background: rgba(255, 255, 255, 0.1);
+}
+.footer-container {
+  width: var(--width-1);
+  margin: auto;
+}
+.footer-contain {
+  display: flex;
+  justify-content: space-between;
+  gap: 102px;
+  padding: 66px 0 79px;
+}
+.footer-logo {
+  color: rgb(230, 83, 60);
+  font-size: 70px;
+  font-weight: 800;
+  font-style: italic;
+  line-height: 120%;
+}
+.f-des {
+  color: rgba(255, 255, 255, 0.5);
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 24px;
+  width: 435px;
+  margin-top: 20px;
+}
+.f-title {
+  color: rgb(255, 255, 255);
+  font-size: 32px;
+  font-weight: 700;
+  line-height: 120%;
+  margin-bottom: 39px;
+}
+
+.footer-menu ul li {
+  list-style: none;
+  margin-bottom: 20px;
+}
+.footer-menu ul li a {
+  color: rgba(255, 255, 255, 0.5);
+  font-family: Inter;
+  font-size: 23px;
+  font-weight: 400;
+  line-height: 120%;
+  transition: all 0.8s ease-in-out;
+}
+.footer-menu ul li a:hover {
+  color: var(--primary-color);
+  text-decoration: underline;
+}
+.hr-line {
+  border: 2px solid rgba(255, 255, 255, 0.1);
+}
+.copyright {
+  padding: 36px 0 35px;
+}
+.copyright p {
+  color: rgba(255, 255, 255, 0.5);
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 24px;
+  letter-spacing: 0.3px;
+  text-align: center;
+}
+
+/******** Our Services ***********/
+#service {
+  width: var(--width-1);
+  margin: auto;
+  padding-bottom: 88px;
+}
+.service-contain {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.service-container {
+  margin-top: 50px;
+}
+.service-1,
+.service-2,
+.service-3,
+.service-4 {
+  border-top: 1px solid rgba(255, 255, 255, 0.5);
+}
+.service-4 {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+}
+.service-card a {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 30px 0;
+}
+.service-card a .service-num {
+  font-size: 20px;
+}
+.service-card a .title {
+  font-size: 40px;
+  font-weight: 400;
+}
+.service-info {
+  display: flex;
+  justify-content: flex-start;
+  gap: 60px;
+  align-items: center;
+  width: 60%;
+}
+
+.arrow {
+  color: rgba(255, 255, 255, 0.5);
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  padding: 20px;
+  border-radius: 50px;
+}
 /************ Responsive Breakpoint *************/
 
 /* Small Device (393 - 576) */
@@ -772,6 +937,53 @@ input::placeholder {
   .cal-btn {
     margin-top: 34px;
   }
+
+  #team {
+    width: 85%;
+    margin: 66px auto;
+  }
+  .team-contain {
+    width: 90%;
+  }
+  .team-container {
+    grid-template-columns: 1fr;
+    margin-top: 37px;
+  }
+
+  .footer-container {
+    width: 90%;
+  }
+  .footer-contain {
+    flex-direction: column;
+    padding: 44px 0 72px;
+    gap: 30px;
+  }
+  .f-des {
+    width: 85%;
+  }
+  .copyright {
+    padding: 41px 0 40px;
+  }
+
+  #service {
+    width: 90%;
+  }
+  .service-contain {
+    flex-direction: column;
+    gap: 40px;
+    text-align: center;
+  }
+  .service-card a {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
+  }
+  .service-info {
+    width: 100%;
+  }
+  .service-card a .title {
+    font-size: 25px;
+  }
 }
 
 /* Medium Device (577 - 744 - 992) */
@@ -900,6 +1112,45 @@ input::placeholder {
   }
   select {
     width: 60%;
+  }
+
+  #team {
+    width: 90%;
+    margin: 72px auto 76px;
+  }
+  .team-contain {
+    width: 90%;
+  }
+  .team-container {
+    margin-top: 54px;
+  }
+  .team-name {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    width: 160px;
+  }
+
+  .footer-container {
+    width: 90%;
+  }
+  .footer-contain {
+    flex-wrap: wrap;
+    padding: 66px 0 71px;
+    width: 80%;
+  }
+  .copyright {
+    padding: 41px 0 40px;
+  }
+
+  #service {
+    width: 90%;
+  }
+  .service-info {
+    width: 80%;
+  }
+  .service-card a .title {
+    font-size: 30px;
   }
 }
 
